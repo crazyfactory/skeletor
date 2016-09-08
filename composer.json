@@ -22,5 +22,5 @@
             "email": "dev@crazy-factory.com"
         }
     ],
-    "bin": ["crazy"]
+    "bin": ["skeletor"]
 }
