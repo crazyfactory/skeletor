@@ -34,7 +34,7 @@ class Create extends Command
         $data_file['.gitignore'] = file_get_contents(__DIR__ . '/_output/.gitignore');
         $this->createFiles($data_file, $data['project_name']);
         $output->writeln("Next steps:");
-        $output->writeln("cd {$data['project_name']} && composer install && composer codecept bootstrap");
+        $output->writeln("cd {$data['project_name']} && composer bootstrap");
     }
 
     private function createFiles($data, $project_name)
