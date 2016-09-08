@@ -8,11 +8,15 @@ class CreateTest extends \PHPUnit_Framework_TestCase
 	private $object;
     protected function setUp()
     {
+    	if(file_exists('test_name')){
+			`rm -Rf test_name`;
+		}
     	$this->object = new \crazyfactory\generator\Create();
     }
 
     protected function tearDown()
     {
+    	`rm -Rf test_name`;
     }
 
     // tests
@@ -28,6 +32,6 @@ class CreateTest extends \PHPUnit_Framework_TestCase
 		self::assertTrue(method_exists($this->object, 'configure'));
 		self::assertTrue(method_exists($this->object, 'execute'));
 
-		//$this->object->execute(new Input(), new Output());
+		$this->object->execute(new Input(), new Output());
 	}
 }

@@ -86,6 +86,12 @@ class Input implements \Symfony\Component\Console\Input\InputInterface {
 	 */
 	public function getArgument($name)
 	{
+		if($name == 'defaults'){
+			return 'default';
+		}
+		if($name == 'name'){
+			return 'test_name';
+		}
 		// TODO: Implement getArgument() method.
 	}
 
