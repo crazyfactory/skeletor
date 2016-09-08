@@ -1,0 +1,29 @@
+# Travis CI config
+language: php
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
+matrix:
+  fast_finish: true
+{% if PHP_VERSIONS %}
+  include:
+{% for version in PHP_VERSIONS %}
+  - php: {{ version }}
+{% endfor %}
+{% endif %}
+{% if ALLOWED_FAILS %}
+  allow_failures:
+{% for fail in ALLOWED_FAILS %}
+  - php: {{ fail }}
+{% endfor %}
+{% endif %}
+
+before_install:
+  - composer self-update
+
+install:
+  composer install --prefer-dist
+
+script:
+  ./vendor/bin/codecept run
