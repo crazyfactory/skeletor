@@ -4,13 +4,17 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "crazyfactory\\generator\\":["src/"]
+            "crazyfactory\\generator\\": [
+                "src/"
+            ]
         },
-        "files": ["src/polyfill.php"]
+        "files": [
+            "src/polyfill.php"
+        ]
     },
     "require": {
         "symfony/console": "^3.1",
-		"php": "^5.4",
+        "php": "^5.4",
         "twig/twig": "^1.24"
     },
     "require-dev": {
@@ -23,5 +27,7 @@
             "email": "dev@crazy-factory.com"
         }
     ],
-    "bin": ["skeletor"]
+    "bin": [
+        "skeletor"
+    ]
 }

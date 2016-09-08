@@ -1,28 +1,31 @@
 {
-	"name": "{{ vendor }}/{{ project_name }}",
-	"description": "{{ description }}",
-	"type": "{{ type }}",
-	"autoload": {
-		"psr-4": {
-			"{{ vendor }}\\{{ project_name }}\\":["src/"]
-		}
-	},
-	"require": {
-
-	},
-	"require-dev": {
-		"codeception/codeception": "*"
-	},
-	"license": "{{ license }}",
-	"authors": [
-		{
-			"name": "{{ author_name }}",
-			"email": "{{ author_email }}"
-		}
-	],
-	"scripts": {
-		"document": "./vendor/bin/apigen generate -s ./src -d ./docs",
-		"codecept": "./vendor/bin/codecept",
-		"test":"./vendor/bin/codecept run"
-	}
+    "name": "{{ vendor }}/{{ project_name }}",
+    "description": "{{ description }}",
+    "type": "{{ type }}",
+    "autoload": {
+        "psr-4": {
+            "{{ vendor }}\\{{ project_name }}\\": [
+                "src/"
+            ]
+        }
+    },
+    "require": {
+    },
+    "require-dev": {
+        "codeception/codeception": "*",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "license": "{{ license }}",
+    "authors": [
+        {
+            "name": "{{ author_name }}",
+            "email": "{{ author_email }}"
+        }
+    ],
+    "scripts": {
+        "document": "./vendor/bin/apigen generate -s ./src -d ./docs",
+        "codecept": "./vendor/bin/codecept",
+        "test": "./vendor/bin/codecept run",
+        "lint": "./vendor/bin/phpcs --standard=PSR2 src"
+    }
 }
