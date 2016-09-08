@@ -23,9 +23,10 @@
         }
     ],
     "scripts": {
-        "document": "./vendor/bin/apigen generate -s ./src -d ./docs",
-        "codecept": "./vendor/bin/codecept",
-        "test": "./vendor/bin/codecept run",
-        "lint": "./vendor/bin/phpcs --standard=PSR2 src"
+        "document": "vendor/bin/apigen generate -s ./src -d ./docs",
+        "codecept": "vendor/bin/codecept",
+        "test": "vendor/bin/codecept run",
+        "lint": "vendor/bin/phpcs --standard=PSR2 src",
+        "bootstrap": "composer install && composer codecept bootstrap"
     }
 }
