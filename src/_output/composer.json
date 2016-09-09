@@ -27,6 +27,7 @@
         "codecept": "vendor/bin/codecept",
         "test": "vendor/bin/codecept run",
         "lint": "vendor/bin/phpcs --standard=PSR2 src",
+        "psr": "vendor/bin/phpcbf --standard=PSR2 src",
         "bootstrap": "composer install && composer codecept bootstrap"
     }
 }
