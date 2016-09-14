@@ -51,7 +51,7 @@ class Create extends Command
         $name = $input->getArgument('name');
         $data = array();
         $data['project_name'] = $this->getData('Enter Project Name', $name);
-        $data['github_username'] = $this->getData('Enter Github User/Organization', 'crazyfactory');
+        $data['github_username'] = $this->getData('Enter Github User/Organization', 'CrazyFactory');
         if (!$this->use_defaults) {
             $output->writeln("Travis Section:");
         }
