@@ -3,14 +3,14 @@
     "description": "Generates boilerplate for PHP projects which sets up things like codeception, travis, etc",
     "type": "library",
     "autoload": {
+        "files": [
+            "src/polyfill.php"
+        ],
         "psr-4": {
             "crazyfactory\\generator\\": [
                 "src/"
             ]
-        },
-        "files": [
-            "src/polyfill.php"
-        ]
+        }
     },
     "require": {
         "symfony/console": "^3.1",
