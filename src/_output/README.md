@@ -38,7 +38,7 @@ This packages ships with a dev-dependency for the Codeception testing framework 
 
     ```// found in products-autodescriptor/tests/_output/coverage/dashboard.html```
 
-    ```$ ./vendor/codeception/codeception/codecept run --coverage --coverage-xml --coverage-html```
+    ```$ composer test --coverage --coverage-xml --coverage-html```
 
 
 
